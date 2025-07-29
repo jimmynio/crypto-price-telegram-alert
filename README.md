@@ -1,24 +1,58 @@
-# Crypto Price Logger & Telegram Alert 🚀
+# 💸 Crypto Price Telegram Alert
 
-A simple Python script that fetches real-time cryptocurrency prices (BTC/ETH), logs data to CSV, and sends Telegram alerts if prices hit custom thresholds.
+A simple Python script that fetches the latest crypto prices (BTC/USDT, etc.) and sends automated price alerts to your Telegram via bot.
 
-- 📈 Real-time price tracking via public API (CoinGecko)
-- 📊 Automatic logging to CSV (for data analysis)
-- 💬 Instant Telegram alerts (Bot API integration)
-- 🕒 Runs periodically via cronjob or Task Scheduler
+## 🚀 Features
+- Fetches live crypto prices from Binance
+- Sends real-time alerts directly to Telegram
+- Easy setup with `.env` file (API keys, bot token, chat ID)
+- Modular and ready for further customization
 
-## Setup
+## 📦 Requirements
 
-1. Clone this repo
-2. Install dependencies:
-    pip install -r requirements.txt
-3. Add your Telegram Bot Token & Chat ID to `.env` or script
-4. Run:
-    python price_logger.py
+- Python 3.8+
+- Binance Python API (`python-binance`)
+- `python-dotenv`
+- `python-telegram-bot`
+- Telegram Bot (via @BotFather)
 
-## Example use cases:
-- Track price trends and spikes
-- Automate trading alerts
-- Build personal crypto dashboards
+Install requirements:
+```bash
+pip install -r requirements.txt
 
-*Author: Dimitris Seriatos*
+⚙️ Setup
+Clone the repo
+
+bash
+Copy
+Edit
+git clone https://github.com/jimmynio/crypto-price-telegram-alert.git
+cd crypto-price-telegram-alert
+
+Create a .env file in the project directory with:
+
+ini
+Copy
+Edit
+BINANCE_API_KEY=your_binance_key
+BINANCE_API_SECRET=your_binance_secret
+TELEGRAM_TOKEN=your_telegram_bot_token
+TELEGRAM_CHAT_ID=your_chat_id
+
+Run the script
+
+bash
+Copy
+Edit
+python price_logger.py
+
+Notes
+Never share your .env file or API keys publicly.
+
+Edit the script to add more coins or customize alerts.
+
+🧑‍💻 Author
+Dimitris Seriatos (jimmynio)
+
+📝 License
+MIT
